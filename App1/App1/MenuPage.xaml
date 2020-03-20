@@ -4,15 +4,15 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="App1.MasterDetailPage1"
+             x:Class="App1.MenuPage"
              xmlns:pages="clr-namespace:App1">
   <MasterDetailPage.Master>
-    <pages:MasterDetailPage1Master x:Name="MasterPage" />
+    <pages:MenuPageMaster x:Name="MasterPage" />
   </MasterDetailPage.Master>
   <MasterDetailPage.Detail>
     <NavigationPage>
       <x:Arguments>
-        <pages:MasterDetailPage1Detail />
+        <pages:MenuPageDetail />
       </x:Arguments>
     </NavigationPage>
   </MasterDetailPage.Detail>

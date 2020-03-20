@@ -13,31 +13,34 @@ using Xamarin.Forms.Xaml;
 namespace App1
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MasterDetailPage1Master : ContentPage
+    public partial class MenuPageMaster : ContentPage
     {
         public ListView ListView;
 
-        public MasterDetailPage1Master()
+        public MenuPageMaster()
         {
             InitializeComponent();
 
-            BindingContext = new MasterDetailPage1MasterViewModel();
+            BindingContext = new MenuPageMasterViewModel();
             ListView = MenuItemsListView;
         }
 
-        class MasterDetailPage1MasterViewModel : INotifyPropertyChanged
+        class MenuPageMasterViewModel : INotifyPropertyChanged
         {
-            public ObservableCollection<MasterDetailPage1MasterMenuItem> MenuItems { get; set; }
+            private const string V = "Add Item";
+            
 
-            public MasterDetailPage1MasterViewModel()
+            public ObservableCollection<MenuPageMasterMenuItem> MenuItems { get; set; }
+
+            public MenuPageMasterViewModel()
             {
-                MenuItems = new ObservableCollection<MasterDetailPage1MasterMenuItem>(new[]
+                MenuItems = new ObservableCollection<MenuPageMasterMenuItem>(new[]
                 {
-                    new MasterDetailPage1MasterMenuItem { Id = 0, Title = "Page 1" },
-                    new MasterDetailPage1MasterMenuItem { Id = 1, Title = "Page 2" },
-                    new MasterDetailPage1MasterMenuItem { Id = 2, Title = "Page 3" },
-                    new MasterDetailPage1MasterMenuItem { Id = 3, Title = "Page 4" },
-                    new MasterDetailPage1MasterMenuItem { Id = 4, Title = "Page 5" },
+                    new MenuPageMasterMenuItem { Id = 0, Title = "Home", TargetType=typeof(MainPage)},
+                    new MenuPageMasterMenuItem { Id = 1, Title = "Profile", TargetType=typeof(MyProfile)},
+                    new MenuPageMasterMenuItem { Id = 2, Title = "Add item" ,TargetType=typeof(AddItem) },
+                    new MenuPageMasterMenuItem { Id = 3, Title = "About Us",TargetType=typeof(About)},
+                    
                 });
             }
 

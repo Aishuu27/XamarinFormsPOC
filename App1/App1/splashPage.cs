@@ -1,4 +1,5 @@
 ﻿using App1;
+using App1.Droid.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,8 @@ public class SplashPage:ContentPage
 	protected async override void OnAppearing() {
 		base.OnAppearing();
 		await splash_logo.ScaleTo(1,5000);
-		Application.Current.MainPage = new NavigationPage(new MainPage());
+		
+		Application.Current.MainPage = new NavigationPage(new MenuPage());
 
 	}
 

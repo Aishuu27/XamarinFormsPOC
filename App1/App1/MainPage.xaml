@@ -10,23 +10,37 @@
         VerticalOptions="CenterAndExpand"
         BackgroundColor="Honeydew"
         Padding="50">
-        
+
         <Entry
         Placeholder="Enter Your Name"
-        PlaceholderColor="DarkOrchid"/>
-        
+        PlaceholderColor="DarkOrchid"
+        x:Name="Name"
+        MaxLength="20"
+        ClearButtonVisibility="WhileEditing"/>
+
         <Entry
         Placeholder="Enter Your Phone Number "
-        PlaceholderColor="DarkOrchid"/>
+        PlaceholderColor="DarkOrchid"
+        x:Name="Phone"
+        ClearButtonVisibility="WhileEditing"/>
         
         <Entry
         Placeholder="Enter State of Residance"
-        PlaceholderColor="DarkOrchid"/>
+        PlaceholderColor="DarkOrchid"
+        x:Name="Residance"
+        MaxLength="20"
+        ClearButtonVisibility="WhileEditing"/>
+
+        <DatePicker x:Name="DOB" ></DatePicker>
         
-        <Entry
+       <Entry
         Placeholder="Enter Email Id"
-        PlaceholderColor="DarkOrchid"/>
-        <Button Text="Register" Clicked="Button_Clicked"></Button> 
+        PlaceholderColor="DarkOrchid"
+        x:Name="Email"
+        MaxLength="20"
+        ClearButtonVisibility="WhileEditing"/>
+        
+       <Button Text="Register" Clicked="Button_Clicked"></Button> 
         
     </StackLayout>
 </ContentPage>

@@ -4,12 +4,12 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="App1.MasterDetailPage1Detail"
-             Title="List Of Added Items">
-  <StackLayout Padding="10"
-               HorizontalOptions="End"
-               VerticalOptions="End">
-        <Button Text="Add Item" ></Button>
-     
-  </StackLayout>
+             x:Class="App1.MyProfile">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
