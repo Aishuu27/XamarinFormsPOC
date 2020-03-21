@@ -6,10 +6,29 @@
              mc:Ignorable="d"
              x:Class="App1.AddItem">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout
+             VerticalOptions="Center">
+            
+             <Editor
+                x:Name="Productname"
+                Placeholder="Enter the product Name"
+                AutoSize="TextChanges"
+                Margin="10"
+                BackgroundColor="SeaShell"/>
+            <Editor
+                x:Name="Productdescription"
+                Placeholder="Enter Description"
+                AutoSize="TextChanges"
+                VerticalOptions="Center"
+                 Margin="10"
+                BackgroundColor="SeaShell"/>
+            
+            <Button
+                Clicked="AddButton_clicked"
+                Text="Add Item"
+                HorizontalOptions="End"
+                VerticalOptions="End"/>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -7,12 +7,25 @@
              x:Class="App1.About">
     <ContentPage.Content>
         <StackLayout
-            HorizontalOptions="Start"
-            VerticalOptions="Start"
-            Padding="30">
-            <Label Text="hello"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+            <Image
+                Source="splash_logo"
+                 Margin="20" />
+            <Label 
+                x:Name="description"
+                Text="We Provide a Platform to upload any information on any product and let the user to access them as and when required"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                FontSize="Large"
+                FontAttributes="Bold"
+                Margin="10"/>
+            <Label 
+                x:Name="version"
+                Text="App Version: Version1"
+                VerticalOptions="CenterAndExpand" 
+                FontSize="Large"
+                FontAttributes="Bold"
+                Margin="10"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

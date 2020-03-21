@@ -20,7 +20,7 @@ namespace App1
         public MenuPageMaster()
         {
             InitializeComponent();
-
+            NavigationPage.SetHasNavigationBar(this, false);
             BindingContext = new MenuPageMasterViewModel();
             ListView = MenuItemsListView;
         }

@@ -14,6 +14,7 @@ namespace App1
     {
         public About()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
     }

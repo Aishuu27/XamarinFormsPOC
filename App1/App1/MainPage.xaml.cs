@@ -24,6 +24,7 @@ namespace App1
         public MainPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             _conn = DependencyService.Get<ISQLite>().GetConnection();
             _conn.CreateTable<Registration>();
         }

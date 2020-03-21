@@ -21,6 +21,7 @@ namespace App1
         public Registration regmodel;
         public Display()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
             _conn = DependencyService.Get<ISQLite>().GetConnection();
             _conn.CreateTable<Registration>();

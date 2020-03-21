@@ -16,9 +16,10 @@ namespace App1
         public MenuPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             //masterPage = new MenuPageMaster();
-           // Master = masterPage;
-           // Detail = new NavigationPage(new About());
+            // Master = masterPage;
+            // Detail = new NavigationPage(new About());
             MasterPage.ListView.ItemSelected += ListView_ItemSelected;
         }
 
