@@ -17,5 +17,10 @@ namespace App1
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
+        protected override bool OnBackButtonPressed()
+        {
+            Application.Current.MainPage = new NavigationPage(new MenuPage());
+            return true;
+        }
     }
 }

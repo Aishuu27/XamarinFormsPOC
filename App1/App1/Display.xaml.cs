@@ -30,8 +30,9 @@ namespace App1
         public void DisplayDetails()
         {
 
-            var details = (from x in _conn.Table<Registration>() select x).ToList();
+           var details = (from x in _conn.Table<Registration>() select x).ToList();
             myListView.ItemsSource = details;
+           
         }
     }
 }

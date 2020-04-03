@@ -20,7 +20,7 @@ namespace App1
     public partial class MainPage : ContentPage
     {
         public SQLiteConnection _conn;
-        public Registration regmodel;
+       // public Registration regmodel;
         public MainPage()
         {
             InitializeComponent();

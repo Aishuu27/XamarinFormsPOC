@@ -8,8 +8,17 @@
     <ContentPage.Content>
         <StackLayout
              VerticalOptions="Center">
-            
-             <Editor
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Image x:Name="PhotoImage" />
+                <Button x:Name="CameraButton" Text="Take Photo" Grid.Row="1" />
+            </Grid>
+
+            <Editor
                 x:Name="Productname"
                 Placeholder="Enter the product Name"
                 AutoSize="TextChanges"

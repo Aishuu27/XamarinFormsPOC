@@ -5,12 +5,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
-
+using SQLite;
 using Xamarin.Forms;
+using System.Data;
 
 public class SplashPage:ContentPage
 {	
 	Image splash_logo;
+	SQLiteConnection database;
+
 	public SplashPage()
 	{
 
@@ -25,13 +28,26 @@ public class SplashPage:ContentPage
 
 		sub.Children.Add(splash_logo);
 		this.BackgroundColor = Color.FromHex("#FFFFFF");
-		this.Content = sub; 
+		this.Content = sub;
+
+		database = DependencyService.Get<ISQLite>().GetConnection();
+		database.CreateTable<Registration>();
 	}
+	
 	protected async override void OnAppearing() {
 		base.OnAppearing();
 		await splash_logo.ScaleTo(1,5000);
+
+		if(database.Table<Registration>().Count() == 0) {
+
+			Application.Current.MainPage = new NavigationPage(new MainPage());
+		}
+		else
+		{
+			Application.Current.MainPage = new NavigationPage(new MenuPage());
+
+		}
 		
-		Application.Current.MainPage = new NavigationPage(new MenuPage());
 
 	}
 

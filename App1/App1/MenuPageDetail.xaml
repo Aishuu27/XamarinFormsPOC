@@ -6,7 +6,18 @@
              mc:Ignorable="d"
              x:Class="App1.MenuPageDetail"
              Title="List Of Added Items">
-  <StackLayout Padding="10">
-    <Label Text="The list of added items will be displayed here"/>
-  </StackLayout>
+        <StackLayout Padding="10">
+        <Label x:Name="message" Text="" FontSize="20"></Label>
+        <StackLayout Orientation="Horizontal">
+            <ListView x:Name="myListView" HasUnevenRows="True" RowHeight="50" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding productname}" Detail="{Binding productdescription}"/>
+                        </DataTemplate>
+
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+
 </ContentPage>
